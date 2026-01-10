@@ -32,27 +32,28 @@ const techStack = [
 const projects = [
   {
   title: "DSFL",
-  description: "A fantasy game similar to Dream11 and Fantasy Premier League but for school interhouse competitions. Students can draft custom teams and track performance with daily point credits based on live match results.",
-  images: ["/dsfl-hero.png", "/dsfl-dashboard.png"], // Replace with your screenshots
-  tags: ["Next.js", "FastAPI", "PostgreSQL", "TailwindCSS"],
+  description: "Doon School Fantasy League is a fantasy game similar to Dream11 and Fantasy Premier League but for school interhouse competitions. Students can create their own fantasy team, picking top players from different houses. At the end of each day, users' team are credited with points based on their performance in the matches played. The site served around 520+ users which consisted of students and teachers.",
+  images: ["/dsfl/1.png", "/dsfl/2.png","/dsfl/3.jpg","/dsfl/4.png"], // Replace with your screenshots
+  tags: ["React", "TailwindCSS", "Python", "Flask", "PostgreSQL"],
   links: [
-    { label: "Website", href: "https://dsfl.yourlink.com", icon: "website" },
-    { label: "Source", href: "https://github.com/yourusername/dsfl", icon: "source" }
+    { label: "Website", href: "https://www.dsfl.app", icon: "website" },
+    { label: "Source", href: "https://github.com/aarav505/fontend", icon: "source" }
   ],
 },
 
   {
     title: "Rupee Ready",
-    description: "Generate winning combinations and analyze lottery trends.",
+    description: "A website for an initiative dedicated to spreading financial literacy among underprivileged students, featuring a form for donor engagement and data collection.",
     // Now an array of images for the gallery
     images: [
-      "/project1-main.png", 
-      "/project1-mobile.png", 
-      "/project1-dashboard.png"
+      "/rupee/1.png", 
+      "/rupee/2.png", 
+      "/rupee/3.png",
+      "/rupee/4.png"
     ],
-    tags: ["NextJS", "PostgreSQL"],
+    tags: ["NextJS", "Web3Forms"],
     links: [
-      { label: "Website", href: "#", icon: "website" },
+      { label: "Website", href: "https://www.rupeeready.in", icon: "website" },
       { label: "Source", href: "#", icon: "source" },
 
     ],
@@ -60,12 +61,13 @@ const projects = [
 
   {
     title: "MedLink",
-    description: "Generate winning combinations and analyze lottery trends.",
+    description: "Built in 2 days, a working hackathon prototype built for individuals, pharmacists, and medical professionals to manage surplus medicines. The platform allows users to list excess medicines or purchase them at discounted prices. The project won 2nd place at the BSAI Opportunity Summit 2025 Hackathon Challenge.",
     // Now an array of images for the gallery
     images: [
-      "/project1-main.png", 
-      "/project1-mobile.png", 
-      "/project1-dashboard.png"
+      "/med/1.png", 
+      "/med/2.png", 
+      "/med/3.png",
+      "/med/4.png"
     ],
     tags: ["NextJS", "PostgreSQL"],
     links: [
@@ -78,12 +80,11 @@ const projects = [
 
   {
     title: "Grandslam Portal",
-    description: "Generate winning combinations and analyze lottery trends.",
+    description: "Serves as the official portal for the Grandslam, a school media power house which covers everything sports. The portal serves multiple purposes which include player rankings in individual sports, published articles and inter-house statistical insights. The portal has been used actively with over 700 unique users during major sporting events.",
     // Now an array of images for the gallery
     images: [
-      "/project1-main.png", 
-      "/project1-mobile.png", 
-      "/project1-dashboard.png"
+      "/portal/1.png", 
+      "/portal/2.png", 
     ],
     tags: ["NextJS", "PostgreSQL"],
     links: [
@@ -95,7 +96,7 @@ const projects = [
 
   {
     title: "DS90 Founders App",
-    description: "Generate winning combinations and analyze lottery trends.",
+    description: "Significantly contributed to the development of the DS90 Founders mobile web application, built to manage visitor logistics during The Doon School’s 90th Founders Day celebrations. I primarily worked on the food scheduling and ordering system, which enabled advance ordering and reduced on-ground queues across 30+ food stalls. The platform also provided campus landmark information and automated event reminders, and successfully served 650+ users during the event.",
     // Now an array of images for the gallery
     images: [
       "/project1-main.png", 
@@ -268,7 +269,7 @@ export default function Home() {
         </div>
       </main>
       {/*Projects Section */}
-      <section id="projects" className=" px-6 md:px-auto max-w-7xl mx-auto z-10 relative">
+      <section id="projects" className=" px-6 md:px-auto max-w-7xl mx-50 z-10 relative">
         <h2 className="text-2xl md:text-7xl font-bold tracking-tighter text-zinc-900 dark:text-white mb-12">
           my projects.
         </h2>
@@ -281,14 +282,14 @@ export default function Home() {
       </section>
 
 
-      <section id="skills" className="py-20 px-6 md:px-20 max-w-7xl mx-auto z-10 relative">
+      <section id="skills" className="py-20 md:px-auto max-w-7xl mx-50 z-10 relative">
       {/* Matches the "my projects." heading style */}
       <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-zinc-900 dark:text-white mb-12">
         my tech.
       </h2>
 
       {/* Grid of simplistic cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {techStack.map((tech) => (
           <div 
             key={tech.name}

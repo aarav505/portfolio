@@ -10,19 +10,7 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   // Scroll logic to hide/show toggle
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 100) { 
-        setIsVisible(false); // Scrolling down
-      } else {
-        setIsVisible(true);  // Scrolling up
-      }
-      setLastScrollY(window.scrollY);
-    };
 
-    window.addEventListener('scroll', controlNavbar);
-    return () => window.removeEventListener('scroll', controlNavbar);
-  }, [lastScrollY]);
 
   return (
     <>
@@ -49,21 +37,8 @@ export default function Navbar() {
       </nav>
 
       {/* Floating Mode Toggle with Scroll Animation */}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div 
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 100, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed bottom-15 left-15 z-[100]"
-          >
-            <div className="p-1 rounded-full bg-white/50 dark:bg-zinc-900/50 backdrop-blur-md border border-zinc-200 dark:border-zinc-800 shadow-2xl hover:scale-110 transition-transform active:scale-95">
-              <ModeToggle />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+        
+     
     </>
   );
 }
