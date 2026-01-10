@@ -32,7 +32,7 @@ const techStack = [
 const projects = [
   {
   title: "DSFL",
-  description: "A full-stack platform for school interhouse contests. Students can draft custom teams and track performance with daily point credits based on live match results.",
+  description: "A fantasy game similar to Dream11 and Fantasy Premier League but for school interhouse competitions. Students can draft custom teams and track performance with daily point credits based on live match results.",
   images: ["/dsfl-hero.png", "/dsfl-dashboard.png"], // Replace with your screenshots
   tags: ["Next.js", "FastAPI", "PostgreSQL", "TailwindCSS"],
   links: [
