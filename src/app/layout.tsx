@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
+import { Analytics } from "@vercel/analytics/next";
 
 import { motion } from "framer-motion";
 import { ModeToggle } from "@/components/ModeToggle";
@@ -51,6 +52,7 @@ export default function RootLayout({
           </motion.div>
         
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
