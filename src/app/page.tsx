@@ -17,17 +17,30 @@ import {
   Wind,
   Code2
 } from "lucide-react";
-
 const techStack = [
+  // Frameworks & Libraries
   { name: "Next.js", icon: <Globe size={20} />, category: "Framework" },
-  { name: "TypeScript", icon: <FileCode size={20} />, category: "Language" },
-  { name: "Tailwind", icon: <Wind size={20} />, category: "Styling" },
-  { name: "Python", icon: <Terminal size={20} />, category: "Backend" },
-  { name: "PostgreSQL", icon: <Database size={20} />, category: "Database" },
-  { name: "FastAPI", icon: <Cpu size={20} />, category: "API" },
   { name: "React", icon: <Code2 size={20} />, category: "Library" },
-  { name: "Docker", icon: <Layers size={20} />, category: "DevOps" },
+
+  // Languages
+  { name: "JavaScript", icon: <FileCode size={20} />, category: "Language" },
+  { name: "Python", icon: <Terminal size={20} />, category: "Language" },
+  { name: "HTML", icon: <Code2 size={20} />, category: "Language" },
+  { name: "CSS", icon: <Wind size={20} />, category: "Language" },
+
+  // Styling
+  { name: "Tailwind CSS", icon: <Wind size={20} />, category: "Styling" },
+
+  // Backend & APIs
+  { name: "Flask", icon: <Cpu size={20} />, category: "Backend" },
+  { name: "Node.js", icon: <Cpu size={20} />, category: "Backend" },
+  { name: "Express.js", icon: <Cpu size={20} />, category: "Backend" },
+
+  // Databases & BaaS
+  { name: "PostgreSQL", icon: <Database size={20} />, category: "Database" },
+  { name: "Firebase", icon: <Database size={20} />, category: "BaaS" },
 ];
+
 
 const projects = [
   {
@@ -37,7 +50,8 @@ const projects = [
   tags: ["React", "TailwindCSS", "Python", "Flask", "PostgreSQL"],
   links: [
     { label: "Website", href: "https://www.dsfl.app", icon: "website" },
-    { label: "Source", href: "https://github.com/aarav505/fontend", icon: "source" }
+    { label: "Source", href: "https://github.com/aarav11anand/dsfl-backend", icon: "source" },
+    { label: "Source (UI)", href: "https://github.com/aarav11anand/dsfl-frontend", icon: "source" },
   ],
 },
 
@@ -54,7 +68,7 @@ const projects = [
     tags: ["NextJS", "Web3Forms"],
     links: [
       { label: "Website", href: "https://www.rupeeready.in", icon: "website" },
-      { label: "Source", href: "#", icon: "source" },
+      { label: "Source", href: "https://github.com/aarav505/rupee_ready_vl", icon: "source" },
 
     ],
   },
@@ -69,10 +83,10 @@ const projects = [
       "/med/3.png",
       "/med/4.png"
     ],
-    tags: ["NextJS", "PostgreSQL"],
+    tags: ["HTML", "CSS", "JavaScript", "Node.js", "Express"],
     links: [
 
-      { label: "Source", href: "#", icon: "source" },
+      { label: "Source", href: "https://github.com/aarav505/MedLink", icon: "source" },
 
     ],
     
@@ -86,10 +100,10 @@ const projects = [
       "/portal/1.png", 
       "/portal/2.png", 
     ],
-    tags: ["NextJS", "PostgreSQL"],
+    tags: ["NextJS", "TailwindCSS"],
     links: [
-      { label: "Website", href: "#", icon: "website" },
-      { label: "Source", href: "#", icon: "source" },
+      { label: "Website", href: "https://grandslam-portal.vercel.app/", icon: "website" },
+      { label: "Source", href: "https://github.com/aarav505/grandslam_portal", icon: "source" },
 
     ],
   },
@@ -99,15 +113,18 @@ const projects = [
     description: "Significantly contributed to the development of the DS90 Founders mobile web application, built to manage visitor logistics during The Doon School’s 90th Founders Day celebrations. I primarily worked on the food scheduling and ordering system, which enabled advance ordering and reduced on-ground queues across 30+ food stalls. The platform also provided campus landmark information and automated event reminders, and successfully served 650+ users during the event.",
     // Now an array of images for the gallery
     images: [
-      "/project1-main.png", 
-      "/project1-mobile.png", 
-      "/project1-dashboard.png"
+      "/chand/1.png", 
+      "/chand/2.png", 
+      "/chand/3.png",
+      "/chand/4.png",
+      "/chand/5.png",
+      "/chand/6.png"
     ],
-    tags: ["NextJS", "PostgreSQL"],
+    tags: ["NextJS", "TailwindCSS", "Firebase"],
     links: [
-      { label: "Website", href: "#", icon: "website" },
-      { label: "Source", href: "#", icon: "source" },
-      { label: "Source (UI)", href: "#", icon: "source" },
+      { label: "Website", href: "https://chandbagh.doonschool.com", icon: "website" },
+      { label: "Source", href: "https://github.com/fitbyshubham/chandbagh-90", icon: "source" },
+      
     ],
   },
   // ... other projects
@@ -117,7 +134,7 @@ const projects = [
 export default function Home() {
   // State for the copy email button
   const [copied, setCopied] = useState(false);
-  const email = "aarav@example.com"; // <--- CHANGE THIS TO YOUR ACTUAL EMAIL
+  const email = "aarav.85.2027@doonschool.com"; // <--- CHANGE THIS TO YOUR ACTUAL EMAIL
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -195,17 +212,16 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
             
             {/* View Projects Button */}
-            <button className="px-6 py-2.5 bg-zinc-900 dark:bg-white dark:text-black text-white rounded-xl font-medium hover:opacity-90 transition shadow-lg flex items-center gap-2 group">
+            <button onClick={() => window.location.href = "#projects"} className="px-6 py-2.5 bg-zinc-900 dark:bg-white dark:text-black text-white rounded-xl font-medium hover:opacity-90 transition shadow-lg flex items-center gap-2 group">
               View Projects
-              <ExternalLink size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </button>
+              </button>
 
             {/* Social Icons Group */}
             <div className="flex items-center gap-2">
               
               {/* GitHub */}
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/aarav505" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all hover:scale-110"
@@ -216,7 +232,7 @@ export default function Home() {
 
               {/* LinkedIn */}
               <a 
-                href="https://linkedin.com/in/yourusername" 
+                href="https://www.linkedin.com/in/aarav-anand-210593370/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all hover:scale-110"
