@@ -178,7 +178,7 @@ export default function Home() {
           </div>
         </main>
 
-        <section id="projects" className="w-full px-6 md:px-12 max-w-7xl mx-auto z-10 relative py-16">
+        <section id="projects" className="w-full px-6 md:px-12 max-w-7xl mt-13 mx-auto z-10 relative py-16">
           <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-zinc-900 dark:text-white mb-8 md:mb-12">
             my projects.
           </h2>
