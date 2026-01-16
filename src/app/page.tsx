@@ -158,7 +158,7 @@ export default function Home() {
                 <a href="https://github.com/aarav505" target="_blank" className="p-2 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 hover:bg-zinc-100 transition-colors">
                   <Github size={18} />
                 </a>
-                <a href="https://linkedin.com" target="_blank" className="p-2 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 hover:bg-zinc-100 transition-colors">
+                <a href="https://www.linkedin.com/in/aarav-anand-210593370/" target="_blank" className="p-2 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 hover:bg-zinc-100 transition-colors">
                   <Linkedin size={18} className="text-blue-600" />
                 </a>
                 <div className="relative">
