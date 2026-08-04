@@ -23,13 +23,16 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#home" className="text-2xl font-light dark:text-white hover:opacity-70 transition-opacity">
+            <Link href="/" className="text-2xl font-light dark:text-white hover:opacity-70 transition-opacity">
               home
             </Link>
-            <Link href="#projects" className="text-2xl font-light dark:text-white hover:opacity-70 transition-opacity">
+            <Link href="/#projects" className="text-2xl font-light dark:text-white hover:opacity-70 transition-opacity">
               projects
             </Link>
-            <Link href="#skills" className="text-2xl font-light dark:text-white hover:opacity-70 transition-opacity">
+            <Link href="/articles" className="text-2xl font-light dark:text-white hover:opacity-70 transition-opacity">
+              blog
+            </Link>
+            <Link href="/#skills" className="text-2xl font-light dark:text-white hover:opacity-70 transition-opacity">
               skills
             </Link>
           </div>
